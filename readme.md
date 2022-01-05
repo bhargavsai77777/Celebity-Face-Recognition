@@ -1,27 +1,14 @@
-![](ui_snapshot.jpg)
-
-In this data science and machine learning project, we classify sports personalities. We restrict classification to only 5 people,
-1) Maria Sharapova
-2) Serena Williams
-3) Virat Kohli
-4) Roger Federer
-5) Lionel Messi
-
-Here is the folder structure,
-* UI : This contains ui website code 
-* server: Python flask server
-* model: Contains python notebook for model building
-* google_image_scrapping: code to scrap google for images
-* images_dataset: Dataset used for our model training
-
-Technologies used in this project,
-1. Python
-2. Numpy and OpenCV for data cleaning
-3. Matplotlib & Seaborn for data visualization
-4. Sklearn for model building
-5. Jupyter notebook, visual studio code and pycharm as IDE
-6. Python flask for http server
-7. HTML/CSS/Javascript for UI
+The main motive is to make the machine learning models perform their best, In order to do that , below is the pipeline followed.
+-->1Data Collection-we need many pictures of the celebrities, and we cannot manually downlaod them. so for that I have used 
+                 1) Selinium scrapping
+                 2) Fatkun Batch download images
+-->2 Data Cleaning: for cleaning the images , I have used haar cascade models in open cv. if in a picture, I am able to see two eyes then , i would use that for training. 
+                    mainly used face cascade and eyes cascade
+--3) Wavelet Tranforms: used wavelet tranforms to extract the minutte features from thimage, once extracted the wavelet image and raw image are stacked vertically and send this combined image for model training
+--4) Model selection, hypter  parameter tuning and training using gradsearchCV 
+--5) with the best classifier from above , predict the celebrity in the given picture 
 
 
-Here is the video playlist for entire project: https://www.youtube.com/playlist?list=PLeo1K3hjS3uvaRHZLl-jLovIjBP14QTXc
+
+Future scope---use flask server to host on the local machine and deploy it to nay clouds like azure or GCP.
+                   
